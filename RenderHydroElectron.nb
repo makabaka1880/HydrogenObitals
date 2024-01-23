@@ -1,0 +1,156 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5033,        148]
+NotebookOptionsPosition[      4663,        133]
+NotebookOutlinePosition[      5079,        150]
+CellTagsIndexPosition[      5036,        147]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"n", " ", "=", " ", "1"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"l", " ", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"m", "=", " ", "0"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"size", " ", "=", " ", "5"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"quality", " ", "=", " ", "200"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalPsi]", "[", 
+     RowBox[{"n_", ",", "l_", ",", "m_", ",", "x_", ",", "y_", ",", "z_"}], 
+     "]"}], ":=", 
+    RowBox[{
+     RowBox[{"E", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"x", "^", "2"}], "+", 
+            RowBox[{"y", "^", "2"}], "+", 
+            RowBox[{"z", "^", "2"}]}], "]"}], "/", "n"}], ")"}]}], ")"}]}], 
+     " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sqrt", "[", 
+         RowBox[{
+          RowBox[{"x", "^", "2"}], "+", 
+          RowBox[{"y", "^", "2"}], "+", 
+          RowBox[{"z", "^", "2"}]}], "]"}], "/", "n"}], ")"}], "^", "l"}], 
+     " ", 
+     RowBox[{"LaguerreL", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "1"}], "-", "l", "+", "n"}], ",", 
+       RowBox[{"1", "+", 
+        RowBox[{"2", " ", "l"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"2", " ", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"x", "^", "2"}], "+", 
+            RowBox[{"y", "^", "2"}], "+", 
+            RowBox[{"z", "^", "2"}]}], "]"}]}], ")"}], "/", "n"}]}], "]"}], 
+     " ", 
+     RowBox[{"SphericalHarmonicY", "[", 
+      RowBox[{"l", ",", "m", ",", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"z", ",", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"x", "^", "2"}], "+", 
+           RowBox[{"y", "^", "2"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "\"\<-RENDER STARTED-\>\"", 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"x", " ", "=", " ", 
+   RowBox[{"DensityPlot3D", "[", 
+    RowBox[{
+     RowBox[{"\[CapitalPsi]", "[", 
+      RowBox[{"n", ",", "l", ",", "m", ",", "x", ",", "y", ",", "z"}], "]"}], 
+     ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"0", "-", "size"}], ",", "0"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"y", ",", 
+       RowBox[{"0", "-", "size"}], ",", "size"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"z", ",", 
+       RowBox[{"0", "-", "size"}], ",", "size"}], "}"}], ",", 
+     RowBox[{"ColorFunction", "->", "\"\<SunsetColors\>\""}], ",", 
+     RowBox[{"Background", "->", "Black"}], ",", " ", 
+     RowBox[{"BoxRatios", "->", 
+      RowBox[{"{", 
+       RowBox[{"0.5", ",", " ", "1", ",", " ", "1"}], "}"}]}], ",", " ", 
+     RowBox[{"Axes", "->", "True"}], ",", " ", 
+     RowBox[{"PlotPoints", "->", "quality"}]}], "]"}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Export", "[", 
+  RowBox[{
+   RowBox[{"StringJoin", "[", 
+    RowBox[{
+    "\"\</Users/makabaka1880/Downloads/HydrogenElectrons/Render/(\>\"", ",", 
+     RowBox[{"ToString", "[", "n", "]"}], ",", "\"\<,\>\"", ",", 
+     RowBox[{"ToString", "[", "l", "]"}], ",", "\"\<,\>\"", ",", 
+     RowBox[{"ToString", "[", "m", "]"}], ",", "\"\<)-\>\"", ",", 
+     RowBox[{"ToString", "[", "quality", "]"}], ",", "\"\<.png\>\""}], "]"}], 
+   ",", "x"}], "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Print", "[", "\"\<-RENDER ENDED-\>\"", "]"}], "\[IndentingNewLine]", 
+ RowBox[{"EmitSound", "[", 
+  RowBox[{"Sound", "[", 
+   RowBox[{
+    RowBox[{"SoundNote", "[", "\"\<C8\>\"", "]"}], ",", " ", "1"}], "]"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"Clear", "[", 
+  RowBox[{"n", ",", "l", ",", "x", ",", "size"}], "]"}]}], "Input",
+ CellChangeTimes->{{3.914965026986498*^9, 3.914965096831255*^9}, {
+  3.914969194568254*^9, 
+  3.914969206311079*^9}},ExpressionUUID->"385b828b-6f3a-4c42-8c1c-\
+449c24a0c353"]
+},
+WindowSize->{Full, Full},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+CellContext->Notebook,
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"56d467b1-547c-4873-89bb-4acc72afb124"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 4101, 111, 388, "Input",ExpressionUUID->"385b828b-6f3a-4c42-8c1c-449c24a0c353"]
+}
+]
+*)
+

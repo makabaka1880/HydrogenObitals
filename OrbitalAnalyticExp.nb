@@ -1,0 +1,152 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.3' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      5464,        144]
+NotebookOptionsPosition[      4899,        126]
+NotebookOutlinePosition[      5290,        142]
+CellTagsIndexPosition[      5247,        139]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{
+    RowBox[{"\[CapitalPsi]", "[", 
+     RowBox[{"n_", ",", "l_", ",", "m_", ",", "x_", ",", "y_", ",", "z_"}], 
+     "]"}], ":=", 
+    RowBox[{
+     RowBox[{"E", "^", 
+      RowBox[{"(", 
+       RowBox[{"-", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"x", "^", "2"}], "+", 
+            RowBox[{"y", "^", "2"}], "+", 
+            RowBox[{"z", "^", "2"}]}], "]"}], "/", "n"}], ")"}]}], ")"}]}], 
+     " ", 
+     RowBox[{
+      RowBox[{"(", 
+       RowBox[{
+        RowBox[{"Sqrt", "[", 
+         RowBox[{
+          RowBox[{"x", "^", "2"}], "+", 
+          RowBox[{"y", "^", "2"}], "+", 
+          RowBox[{"z", "^", "2"}]}], "]"}], "/", "n"}], ")"}], "^", "l"}], 
+     " ", 
+     RowBox[{"LaguerreL", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"-", "1"}], "-", "l", "+", "n"}], ",", 
+       RowBox[{"1", "+", 
+        RowBox[{"2", " ", "l"}]}], ",", 
+       RowBox[{
+        RowBox[{"(", 
+         RowBox[{"2", " ", 
+          RowBox[{"Sqrt", "[", 
+           RowBox[{
+            RowBox[{"x", "^", "2"}], "+", 
+            RowBox[{"y", "^", "2"}], "+", 
+            RowBox[{"z", "^", "2"}]}], "]"}]}], ")"}], "/", "n"}]}], "]"}], 
+     " ", 
+     RowBox[{"SphericalHarmonicY", "[", 
+      RowBox[{"l", ",", "m", ",", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"z", ",", 
+         RowBox[{"Sqrt", "[", 
+          RowBox[{
+           RowBox[{"x", "^", "2"}], "+", 
+           RowBox[{"y", "^", "2"}]}], "]"}]}], "]"}], ",", 
+       RowBox[{"ArcTan", "[", 
+        RowBox[{"x", ",", "y"}], "]"}]}], "]"}]}]}], ";"}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"\[CapitalPsi]", "[", 
+   RowBox[{"1", ",", "0", ",", "0", ",", "x", ",", "y", ",", "z"}], "]"}], 
+  " ", "//", " ", "FullSimplify"}], "\[IndentingNewLine]"}], "Input",
+ CellChangeTimes->{{3.914551256946217*^9, 3.914551275690843*^9}, {
+   3.914557112614338*^9, 3.9145571289938726`*^9}, {3.914557673222241*^9, 
+   3.9145576733123903`*^9}, {3.9145577490306253`*^9, 3.914557749909018*^9}, {
+   3.914564595889098*^9, 3.9145645960679417`*^9}, {3.914566212047413*^9, 
+   3.9145662121934357`*^9}, {3.914576531610546*^9, 3.914576532833452*^9}, {
+   3.9145765809000196`*^9, 3.914576594907391*^9}, {3.914576907023978*^9, 
+   3.914576908474518*^9}, {3.914624443965168*^9, 3.9146244459774942`*^9}, {
+   3.9146267594612103`*^9, 3.914626759687841*^9}, {3.9146284791548853`*^9, 
+   3.914628481600288*^9}, {3.914640634983932*^9, 3.9146406398381453`*^9}, {
+   3.914652687558549*^9, 3.914652687693667*^9}, {3.914915622475745*^9, 
+   3.914915623808416*^9}, {3.914915662635735*^9, 3.9149156627410316`*^9}, {
+   3.914921170019885*^9, 3.91492117124255*^9}, {3.914941649765069*^9, 
+   3.914941693384718*^9}, {3.914941854818111*^9, 3.914941856571281*^9}, {
+   3.914941932558857*^9, 3.914941934726329*^9}, 3.914941968468087*^9, {
+   3.914942123050745*^9, 3.9149421363476048`*^9}, {3.914944513857252*^9, 
+   3.914944514019443*^9}, {3.9149692251331*^9, 3.914969226205553*^9}},
+ CellLabel->"In[35]:=",ExpressionUUID->"57404418-935a-4064-8771-630f4b6e4326"],
+
+Cell[BoxData[
+ FractionBox[
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{"-", 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox["x", "2"], "+", 
+      SuperscriptBox["y", "2"], "+", 
+      SuperscriptBox["z", "2"]}]]}]], 
+  RowBox[{"2", " ", 
+   SqrtBox["\[Pi]"]}]]], "Output",
+ CellChangeTimes->{
+  3.914551276941161*^9, 3.9145571300018587`*^9, 3.914557673809393*^9, 
+   3.9145577513548117`*^9, 3.914564597448554*^9, 3.914566212739335*^9, 
+   3.914576533475856*^9, {3.9145765821390247`*^9, 3.9145765954169703`*^9}, 
+   3.914624447022624*^9, 3.914626760596908*^9, 3.914628486270829*^9, 
+   3.914640641057439*^9, 3.9146526888933897`*^9, 3.914915624398816*^9, 
+   3.91491566318505*^9, 3.914921172260997*^9, {3.914941650865911*^9, 
+   3.914941693885375*^9}, 3.914941858421153*^9, {3.914941933496402*^9, 
+   3.914941935109321*^9}, 3.9149419689365463`*^9, {3.914942123703621*^9, 
+   3.914942136869544*^9}, 3.914944514497908*^9, 3.914969237252417*^9},
+ CellLabel->"Out[36]=",ExpressionUUID->"1d5786ef-fa45-4986-87ab-43dcd8aae334"]
+}, Open  ]],
+
+Cell[BoxData[" "], "Input",
+ CellChangeTimes->{
+  3.91494162982975*^9},ExpressionUUID->"e57a0656-dcd3-4595-bfc6-6a3a10fb1301"]
+},
+WindowSize->{808, 860},
+WindowMargins->{{4, Automatic}, {Automatic, 4}},
+FrontEndVersion->"13.3 for Mac OS X ARM (64-bit) (July 24, 2023)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"e6cf61e4-eee3-458c-85bc-d95aead662b2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3145, 74, 136, "Input",ExpressionUUID->"57404418-935a-4064-8771-630f4b6e4326"],
+Cell[3728, 98, 1026, 21, 85, "Output",ExpressionUUID->"1d5786ef-fa45-4986-87ab-43dcd8aae334"]
+}, Open  ]],
+Cell[4769, 122, 126, 2, 30, "Input",ExpressionUUID->"e57a0656-dcd3-4595-bfc6-6a3a10fb1301"]
+}
+]
+*)
+
